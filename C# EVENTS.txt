@@ -1,0 +1,36 @@
+C# EVENTS:-
+
+Events:
+The events are declared using the keyword event. The syntax for this is given as followed:
+========================================================================================
+Event Syntax
+event delegate_name event_name;
+========================================================================================
+
+
+Steps for implementing the events:
+
+1.Declaration of the Event
+public event CellEventHandler CellEvent;
+
+2.Invokation of the Event
+if (CellEvent != null) CellEvent(this, e);
+
+We can invoke the Event only from within the class where we declared the Event.
+
+3.Hooking up the Event
+OurEventClass.OurEvent += new ChangedEventHandler(OurEventChanged);
+
+4.Detach the Event
+OurEventClass.OurEvent -= new ChangedEventHandler(OurEventChanged);
+
+========================================================================
+KEYWORDS USED FOR EVENTS:
+
+*Keyword	                *Description	
+1.static               	         Makes the event available to callers at any time, even if no instance of the class exists
+2virtual	                 Allows derived classes to override the event behavior by using the override keyword.
+3.sealed	                 Specifies that for derived classes it is no longer virtual.
+4.abstract	                 The compiler will not generate the add and remove event accessor blocks and therefore derived classes must provide their own implementation.
+
+
