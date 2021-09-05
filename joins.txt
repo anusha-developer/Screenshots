@@ -1,0 +1,14 @@
+
+select * from table_name as_name left join table_name2 as_name on table1as_name.col_name=table2as_name.col_name;
+SQL JOINS:  joins is used to combine rows from two or more tables  based on related column between them 
+TYPES OF JOINS: 
+1.inner join: return records that have matching values in both tables.
+
+syntax: select  *  from table_name as_name inner join table_name2 as_name  on table1as.col_name=table2as_name.col_name;
+
+2.left join:return all records from the left         table,and the matched records from right table.
+syntax:
+select * from table_name as_name left join table_name2 as_name on table1as_name.col_name=table2as_name.col_name;
+3.right join:return all records from the right table,and the matched records from the left table.
+syntax:
+select * from table_name as_name right join table_name2 as_name on table1as_name.col_name=table2as_name.col_name;

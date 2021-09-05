@@ -1,0 +1,26 @@
+HASHSET METHODS:
+=====================================================================
+1.public bool Add();
+2.public void Clear();
+3.public bool Contains();
+4.public void CopyTo();
+5.public int EnsureCapacity();
+6.public void ExceptWith();
+7.public GetEnumerator();
+8.public  void GetObjectData();
+9.public void IntersectWith();
+10.public bool IsProperSubsetOf();
+11.public bool IsProperSupersetOf();
+12.public bool IsSubsetOf();
+13.public bool IsSupersetOf();
+14.public virtual void OnDeserialization();
+15.public bool Overlaps();
+16.public bool Remove();
+17.public int RemoveWhere();
+18.public bool SetEquals();
+19.public void SymmetricExceptWith();
+20.public void TrimExcess();
+21.public bool TryGetValue();
+22.public void UnionWith();
+23.public void Dispose();
+24.public bool MoveNext();

@@ -1,0 +1,35 @@
+LIST METHODS:
+==============================================
+1.public List();
+2.public void Add();
+3.public void AddRange();
+public read AsReadOnly()
+4.public int BinarySearch();
+5.public void Clear();
+6.public bool Contains();
+7.public list ConvertAll();
+8.public void CopyTo();
+9.public bool Exists();
+10.public T Find();
+11.public List<T> FindAll();
+12.public int FindIndex();
+13.public T FindLast();
+14.public int FindLastIndex();
+15.public void ForEach();
+16.public GetEnumerator();
+17.public  GetRange();
+18.public int IndexOf();
+19.public void Insert();
+20.public void InsertRange();
+21.public int LastIndexOf();
+22.public bool Remove();
+23.public int RemoveAll();
+24.public void RemoveAt();
+25.public void RemoveRange();
+26.public void Reverse();
+27.public void Sort();
+28.public T[] ToArray();
+29.public void TrimExcess();
+30.public bool TrueForAll();
+31.public void Dispose();
+32.public bool MoveNext();

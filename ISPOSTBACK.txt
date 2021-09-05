@@ -1,0 +1,14 @@
+
+ISPOSTBACK:--
+========================================================
+every time you bind DropDownList, selectedindex will be reset. if you want to bind DropDownList from database in page_load event, you only need to bind it one time only to avoid selection reset. Bind it in not ispostback only.
+
+
+One way to do this is to extend the ASP.NET Page class, "override"
+
+IsPostBack property and let all your pages derive from the extended page.
+
+It checks the Request.Form collection to see if it is non-empty.
+
+http://net-informations.com/faq/asp/ispostback.htm
+

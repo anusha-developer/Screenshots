@@ -1,0 +1,195 @@
+//use database
+use employees;
+
+//fetch the details   <CNTRL+ ENTER> FOR EXECUTING COMMAND
+SELECT * FROM <table-name>;
+SELECT * FROM departments; 
+SELECT * FROM employees;
+=================================================================================================
+//SELECT DATABASE();
+DATABASE CONNECTED OR NOT IF CONNECTED TABLENAME IS EXISTS IF NOT NULL
+================================================================================================
+//WHERE CLAUSE(PREDICATE)	
+===============================================================================================
+EX1)SELECT * FROM employees WHERE first_name="saniya";
+EX2)SELECT * FROM employees WHERE emp_no=10008;
+==============================================================================================
+//AND Operator
+
+select * from emp where job='CLERK' and deptno=20;
+
+
+//OR/AND            AND=>OR
+
+
+select * from emp where deptno=30 OR deptno=20  AND job='CLERK';
+select * from emp where deptno=30 OR (deptno=20  AND job='CLERK'); 
+==================================================================================================
+//List the rows of only  clerk  deptno 20 and 30  
+
+SELECT * FROM emp
+where  (deptno=20 and job='clerk') or
+(deptno=30 and job='clerk');
+
+=================================================================================================
+//List the rows of analyst,manager,clerk
+
+SELECT  * FROM emp WHERE job='MANAGER'
+ OR job='ANALYST'  OR job='CLERK';
+
+ SELECT * FROM emp WHERE job IN('MANAGER','ANALYST','CLERK');
+================================================================================================
+//List the rows of NOT analyst,manager,clerk
+ SELECT * FROM emp WHERE job NOT IN('MANAGER','ANALYST','CLERK');
+
+ SELECT * FROM emp WHERE job != 'MANAGER' AND 
+        job != 'ANALYST' AND
+        job != 'CLERK';
+
+==============================================================================================
+List rows of employees salary in the range of  1500 through 3000 from emp includes the limits
+in output (Between includes the limits)
+
+SELECT  * FROM emp where sal >=1500 AND sal<=3000;
+SELECT  * FROM emp  WHERE sal BETWEEN 1500 and 3000;
+
+SELECT  * FROM  emp  WHERE sal > 1500 AND sal < 3000;
+================================================================================================
+List rows of the employees drawing any salary  expect in the range of 1500 and 3000;
+
+
+SELECT * FROM emp WHERE sal < 1500 OR  sal > 3000;
+SELECT * FROM emp WHERE sal NOT BETWEEN 1500 AND 3000;
+==============================================================================================
+NULL         NULL is not comparable
+
+SELECT * FROM emp WHERE comm=NULL;
+SELECT * FROM emp WHERE comm IS NULL;
+receives commision
+SELECT * FROM emp WHERE comm IS NOT NULL;
+==================================================================================================
+LIKE
+
+TWO WILD CARTS % AND _
+
+LIST THE EMPLOYEES IN THE EMP TABLE WHICH CONTAINS UPPERCASE "LL" IN THE NAME
+
+SELECT * FROM emp WHERE  ename LIKE '%LL%';
+
+SELECT * FROM emp WHERE  ename LIKE '__%LL%';
+
+ENDING WITH "ER"
+
+SELECT * FROM emp WHERE  ename LIKE '%ER';
+
+START WITH "A" 
+SELECT * FROM emp WHERE  ename LIKE 'A%';
+==================================================================================================
+ORDER BY
+acending order by sal
+
+SELECT * FROM emp ORDER BY sal;
+
+SELECT * FROM emp ORDER BY sal ASC;
+
+SELECT * FROM emp ORDER BY comm;
+
+decending Order
+
+SELECT * FROM emp ORDER BY sal DESC;
+
+SELECT * FROM emp ORDER BY comm DESC;
+
+decending and acending order
+
+SELECT * FROM emp ORDER BY  deptno DESC,sal ASC;
+
+SELECT * FROM emp  WHERE  deptno=30 ORDER BY sal;
+=================================================================================================
+PIPE OPERATOR (||) OR
+
+SELECT * FROM emp WHERE deptno=20 || deptno=30;
+SELECT * FROM emp WHERE deptno=20 OR deptno=30;
+==================================================================================================
+* is PROJECTION 
+
+
+SELECT * FROM emp WHERE  deptno=30;
+
+SELECT ename,job,sal FROM emp WHERE  deptno=30;
+
+SELECT * FROM dept;
+SELECT * FROM dept WHERE deptno=30;
+SELECT dname,loc FROM dept WHERE deptno=30;
+==================================================================================================
+Column ALias
+
+SELECT ename AS 'employee name', 
+sal AS salary,
+comm AS commission,
+deptno "department number"
+FROM emp
+WHERE  deptno=30;
+
+===============================================================================================
+ARITHEMATIC OPERATORS
+
+SELECT ename AS 'employee name',
+ sal AS salary,
+ sal * 70/100 AS allowance FROM emp WHERE deptno=20;
+
+ SELECT 223+489 AS TOTAL;
+===============================================================================================
+DISTNICT OPERATOR    distnict is used immediate to the  select
+
+SELECT DISTINCT job FROM emp;
+
+SELECT DISTINCT  deptno,job FROM emp;
+=================================================================================================
+LIMIT
+
+SELECT * FROM employees LIMIT 20;
+SELECT * FROM employees LIMIT 5;
+SELECT * FROM employees LIMIT 0,10;
+SELECT * FROM employees LIMIT 10,10;
+==================================================================================================
+IFNULL() Function
+
+SELECT ename AS 'employee name',
+          sal AS salary,
+          comm AS commission,
+           sal+comm AS earning
+ FROM emp;
+
+Arguments
+==========
+(300,0)
+(testedfornull,0)
+
+
+use demo;
+SELECT * FROM emp;
+SELECT ename AS 'employee name',
+          sal AS salary,
+          comm AS commission,
+           sal+ IFNULL(comm,0) AS earning
+ FROM emp;
+
+==================================================================================================
+COALESCE() Function
+
+use demo;
+SELECT * FROM emp;
+SELECT ename AS 'employee name',
+          sal AS salary,
+          comm AS commission,
+           sal+ COALESCE(comm,0) AS earning
+ FROM emp;
+
+
+
+
+
+
+
+

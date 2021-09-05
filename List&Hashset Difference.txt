@@ -1,0 +1,38 @@
+Difference Between LIST&HASHSET:
+
+LIST:
+=======================================================
+1.List is an ordered list. 
+
+2.It is accessed by an integer index
+
+3.It  contain duplicates
+
+4.It has a predictable order,Store a collection of items in a certain order. 
+
+5.A List<T> is a class designed to give you a collection with O(1) random access than can grow dynamically (think dynamic array).
+
+6.You can test containment in O(n) time (unless the list is sorted)
+
+7.Then you can do a binary search in O(log n) time).
+
+
+
+ HASTSET:
+======================================================================
+
+1.HashSet is like a dictionary 
+
+2.The item itself is the key as well as the value,unordered
+
+3.HashSet is a List with no duplicate members.
+
+4.HashSet is constrained to contain only unique entries, the internal structure is optimised for searching (compared with a list) - it is considerably faster
+
+5.Adding to a HashSet returns a boolean - false if addition fails due to already existing in Set
+
+6.It Can perform mathematical set operations against a Set: Union/Intersection/IsSubsetOf etc.
+
+7.HashSet doesn't implement IList only ICollection
+
+8.You cannot use indices with a HashSet, only enumerators.

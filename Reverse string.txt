@@ -1,0 +1,10 @@
+string str,revstring=";
+console.writeline("Indiaismycountry");
+str= console.Readline();
+For(int i=str.length-1;i>=0;i--)
+{
+revstring revstring+str[i];
+}
+console.writeline("reverse string is :{0}",revstring);
+console.Readline();
+}

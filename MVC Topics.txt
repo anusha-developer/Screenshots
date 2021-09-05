@@ -1,0 +1,43 @@
+Topics in DotnetMVC:
+=========================
+1.MVC Architecture
+2.MVC Version History
+3.MVC Structure
+4.Routing
+5.Controller
+6.Action  methods
+7.Action Selectors
+8.Action verbs
+9.Models
+10.Views
+11.Controller
+12.Razor Syntax
+13.Create Edit View
+14.Html Helpers
+15.Textbox
+16.TextArea
+17.Checkbox
+18.RadioButton
+19.dropdownlist
+20.Hiddenfield
+21.Password
+22.Display
+23.Label
+24.Editor
+25.Exception Handling
+26.Validation
+27.ValidationMessageFor
+28.ValidationSummary
+29.Layout View
+30.Create Layout View
+31.Partial View
+32.ViewBag
+33.ViewData
+34.TempData
+35.Filters
+36.ActionFilters
+37.Bundlings
+38.ScriptBundle
+39.StyleBundle
+40.Area
+41.Useful Resources 

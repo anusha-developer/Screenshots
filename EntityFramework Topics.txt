@@ -1,0 +1,21 @@
+
+ENTITY FRAMEWORK  TOPICS:
+=============================================================
+1.what is Entity
+2.What is EntityFramework
+3.Entity Framework Tutorial
+  *Need for EntityFramework
+  *Features of EntityFramework
+4.Entity Framework Core
+5.Entity Framework Architecture
+  *Contect Clas in entityframework
+6.Types of Entities
+  *POCO Entities (Plain Old CLR Object)
+  *Dynamic Proxy Entities (POCO Proxy)
+7.WorkFlow of EntityFramework
+  *Working flow entityframework
+8.Entity DataModel
+9.Development Approaches with Entity Framework
+   1.Database First
+   2.Code-First
+   3.Model-First
